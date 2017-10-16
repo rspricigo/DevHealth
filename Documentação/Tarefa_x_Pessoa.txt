@@ -1,0 +1,7 @@
+Guilherme: 
+
+Larissa: PessoaFisica; Contatos; TelContato; Usuario;
+
+Jackson: Agenda; Agendamento; Atendimento; Evolucao;
+
+Reginaldo: Classe procedimento; Configuracao de classe de conexao com o banco.
