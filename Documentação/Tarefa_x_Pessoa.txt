@@ -1,4 +1,4 @@
-Guilherme: 
+Guilherme: Especialidade; Convenio; ProcAgendamento;
 
 Larissa: PessoaFisica; Contatos; TelContato; Usuario;
 
