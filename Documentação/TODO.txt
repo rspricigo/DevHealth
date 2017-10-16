@@ -1,0 +1,37 @@
+Criar as classes:
+Agenda; Agendamento; Atendimento; Evolucao;
+PessoaFisica; Contatos; Usuario; TurnoAgenda;
+Especialidade; Convenio; ProcAgendamento; Procedimento;
+
+Considerar os itens abaixo:
+
+
+/*
+
+
+Agenda ter lista de Turnos
+
+Agendamento ter lista de Proc_Agendamento
+
+Atendimento Simples
+
+Evolução Simples
+
+Pessoa Fisica ter lista de Contatos.
+
+Contatos ter lista de tel_contatos
+
+Usuario terá objeto Pessoa
+
+Turno Agenda Simples
+
+Especialidade Simples
+
+Convênio Simples
+
+Proc_Agendamento Simples
+
+Procedimento Simples.
+
+
+*/
