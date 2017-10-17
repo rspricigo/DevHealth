@@ -5,6 +5,7 @@ Especialidade; Convenio; ProcAgendamento; Procedimento;
 
 Considerar os itens abaixo:
 
+senha do banco d3vhe4lth
 
 /*
 
