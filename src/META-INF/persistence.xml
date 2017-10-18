@@ -7,10 +7,11 @@
  <persistence-unit name="mydb">
 
    <!-- provedor/implementacao do JPA -->
-   <provider>org.hibernate.ejb.HibernatePersistence</provider>
+   <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+   
 
    <!-- entidade mapeada -->
-   <class></class>
+   <class>com.devhealth.entity.Procedimento.class</class>
 
    <properties>
   <!-- dados da conexao -->
