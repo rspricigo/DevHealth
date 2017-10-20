@@ -5,24 +5,28 @@
     version="2.0">
 
  <persistence-unit name="mydb">
+ <non-jta-data-source>java:comp/env/jdbc/MyLocalDB</non-jta-data-source>
 
    <!-- provedor/implementacao do JPA -->
-   <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-   
+  <!--   <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+   -->
 
    <!-- entidade mapeada -->
    <class>com.devhealth.entity.Procedimento.class</class>
 
+	
    <properties>
   <!-- dados da conexao -->
-   <property name="javax.persistence.jdbc.driver" 
+   <!-- <property name="javax.persistence.jdbc.driver" 
        value="com.mysql.jdbc.Driver" />
   <property name="javax.persistence.jdbc.url" 
       value="jdbc:mysql://localhost/mydb" />
   <property name="javax.persistence.jdbc.user" 
       value="root" />
   <property name="javax.persistence.jdbc.password" 
-      value="d3vhe4lth" />
+      value="d3vhe4lth" /> -->
+      
+      
 
    <!--  propriedades do hibernate -->
    <property name="hibernate.dialect" 

@@ -8,7 +8,9 @@ import com.devhealth.entity.Procedimento;
 
 public class TesteDAO {
 	
-	public static void main(String[] args) {
+	public void teste() {
+		
+		
 		EntityManagerFactory factory = 
 				Persistence.createEntityManagerFactory("mydb");
 		
@@ -22,7 +24,6 @@ public class TesteDAO {
 		em.getTransaction().commit();
 		em.close();
 		factory.close();
-		
 		
 	}
 	
