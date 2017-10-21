@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.devhealth.entity.Procedimento;
+import com.devhealth.entity.ProcedimentoTeste;
 
 public class TesteDAO {
 	
@@ -16,7 +16,7 @@ public class TesteDAO {
 		
 		EntityManager em = factory.createEntityManager();
 		
-		Procedimento proc = new Procedimento();
+		ProcedimentoTeste proc = new ProcedimentoTeste();
 		
 		proc.setDs_procedimento("Teste de procedimento");
 		em.getTransaction().begin();
