@@ -5,16 +5,13 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import com.devhealth.entity.Procedimento;
+import com.devhealth.util.JPAUtil;
 
 public class TesteDAO {
 	
-	public void teste() {
+	public void teste() {		
 		
-		
-		EntityManagerFactory factory = 
-				Persistence.createEntityManagerFactory("mydb");
-		
-		EntityManager em = factory.createEntityManager();
+		EntityManager em = JPAUtil.getEntityManager();
 		
 		Procedimento proc = new Procedimento();
 		
@@ -23,7 +20,7 @@ public class TesteDAO {
 		em.persist(proc);
 		em.getTransaction().commit();
 		em.close();
-		factory.close();
+		
 		
 	}
 	
