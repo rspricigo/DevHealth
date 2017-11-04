@@ -27,8 +27,8 @@ public abstract class GenericDAO<T, I extends Serializable> {
 		EntityManager em = JPAUtil.getEntityManager();
 		em.getTransaction().begin();
 		em.persist(entity);
-		em.flush();
 		em.getTransaction().commit();
+		em.close();
 		return entity;
 	}
 	
@@ -38,19 +38,25 @@ public abstract class GenericDAO<T, I extends Serializable> {
 		em.merge(entity);
 		em.flush();
 		em.getTransaction().commit();
+		em.close();
 		return entity;
 	}
 	
 	public List<T> getList() {
-	       CriteriaBuilder builder = JPAUtil.getEntityManager()
-	    		   .getCriteriaBuilder();
+		   EntityManager em = JPAUtil.getEntityManager();
+	       CriteriaBuilder builder = em.getCriteriaBuilder();
 	       CriteriaQuery<T> query = builder.createQuery(persistedClass);
 	       query.from(persistedClass);
-	       return JPAUtil.getEntityManager().createQuery(query).getResultList();
+	       List<T> list = em.createQuery(query).getResultList();
+	       em.close();
+	       return list;
 	   }
 
 	   public T encontrar(I id) {
-	       return JPAUtil.getEntityManager().find(persistedClass, id);
+		   EntityManager em = JPAUtil.getEntityManager();
+		   T obj = em.find(persistedClass, id);
+		   em.close();
+	       return obj;
 	   }
 	
 }

@@ -16,10 +16,13 @@ public class TesteDAO {
 		Procedimento proc = new Procedimento();
 		
 		proc.setDs_procedimento("Teste de procedimento");
-		em.getTransaction().begin();
+		/*em.getTransaction().begin();
 		em.persist(proc);
 		em.getTransaction().commit();
-		em.close();
+		em.close();*/
+		
+		ProcedimentoDAO dao = new ProcedimentoDAO();
+		dao.save(proc);
 		
 		
 	}
