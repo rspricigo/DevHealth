@@ -36,7 +36,6 @@ public abstract class GenericDAO<T, I extends Serializable> {
 		EntityManager em = JPAUtil.getEntityManager();
 		em.getTransaction().begin();
 		em.merge(entity);
-		em.flush();
 		em.getTransaction().commit();
 		em.close();
 		return entity;

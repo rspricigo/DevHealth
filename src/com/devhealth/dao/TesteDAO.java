@@ -15,14 +15,16 @@ public class TesteDAO {
 		
 		Procedimento proc = new Procedimento();
 		
-		proc.setDs_procedimento("Teste de procedimento");
+		//proc.setDs_procedimento("Teste de procedimento");
 		/*em.getTransaction().begin();
 		em.persist(proc);
 		em.getTransaction().commit();
 		em.close();*/
 		
 		ProcedimentoDAO dao = new ProcedimentoDAO();
-		dao.save(proc);
+		proc = dao.encontrar(5) ;
+		
+		System.out.println(proc.getDs_procedimento());
 		
 		
 	}
