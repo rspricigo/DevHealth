@@ -1,3 +1,12 @@
+30-10-2017
+
+- Guilherme: Agendamento, Atendimento, Agendas e Convênios
+
+- Jackson: Pessoas, Prontuários, Cadastros
+
+- Larissa e Reginaldo: Mapear as classes restantes para o BD e criação de CRUD's
+
+---------------------------------------------------------
 Guilherme: Especialidade; Convenio; ProcAgendamento;
 
 Larissa: PessoaFisica; Contatos; TelContato; Usuario;

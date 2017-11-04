@@ -1,3 +1,10 @@
+30-10-2017
+
+	- Protótipos de telas;
+	- Mapear as classes restantes para o BD e
+	- Criação de CRUD's
+
+--------------------------------------------------------
 Criar as classes:
 Agenda; Agendamento; Atendimento; Evolucao;
 PessoaFisica; Contatos; Usuario; TurnoAgenda;
