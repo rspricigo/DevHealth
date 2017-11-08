@@ -12,7 +12,7 @@
    -->
 
    <!-- entidade mapeada -->
-   <class>com.devhealth.entity.Procedimento.class</class>
+   <class>com.devhealth.entity.Procedimento</class>
 
 	
    <properties>
