@@ -22,11 +22,32 @@
 
 <div class="table" id="consultar">
 	<div class="tr">
-		<div class="tdc">Código de Pessoa: <input type="text" id="con_cd_pessoa_fisica">&nbspProntuário: <input type="text" id="con_nr_prontuario">&nbspNome: <input type="text" id="con_nm_pessoa">&nbspNome Social: <input type="text" id="con_nm_social"></div>
-		<div class="tdc">CPF: <input type="text" id="con_cd_cpf">&nbspRG: <input type="text" id="con_nr_rg">&nbspPassaporte: <input type="text" id="con_nr_passaporte">&nbspCódigo Mãe: <input type="text" id="con_cd_mae"></div>
-		<div class="tdd">Nome Mãe: <input type="text" id="con_ds_mae">&nbspReligião: <input type="text" id="con_cd_religiao">&nbspCódigo Pai: <input type="text" id="con_cd_pai">&nbspNome Pai: <input type="text" id="con_ds_pai"></div>
-		<div class="tdc">Data de Nascimento: <input type="text" id="con_dt_nascimento">&nbspSexo: <input type="text" id="con_ie_sexo">&nbspNacionalidade: <input type="text" id="con_cd_nacionalidade"></div>
-		<div class="tdc">Data Atualizacão: <input type="text" id="con_dt_atualizacao">&nbspData Criacão<input type="text" id="con_dt_criacao"></div>
+		<div class="tdd">
+			Código de Pessoa: <input type="text" id="con_cd_pessoa_fisica">&nbsp
+			Prontuário: <input type="text" id="con_nr_prontuario">&nbsp
+			Nome: <input type="text" id="con_nm_pessoa">&nbsp
+			Nome Social: <input type="text" id="con_nm_social">
+		</div>
+		<div class="tdd">
+			CPF: <input type="text" id="con_cd_cpf">&nbsp
+			RG: <input type="text" id="con_nr_rg">&nbsp
+			Passaporte: <input type="text" id="con_nr_passaporte">&nbsp
+			Código Mãe: <input type="text" id="con_cd_mae">
+		</div>
+		<div class="tdd">
+			Nome Mãe: <input type="text" id="con_ds_mae">&nbsp
+			Religião: <input type="text" id="con_cd_religiao">&nbsp
+			Código Pai: <input type="text" id="con_cd_pai">&nbsp
+			Nome Pai: <input type="text" id="con_ds_pai">
+		</div>
+		<div class="tdd">Data de Nascimento: <input type="text" id="con_dt_nascimento">&nbsp
+			Sexo: <input type="text" id="con_ie_sexo">&nbsp
+			Nacionalidade: <input type="text" id="con_cd_nacionalidade">
+		</div>
+		<div class="tdd">
+			Data Atualizacão: <input type="text" id="con_dt_atualizacao">&nbsp
+			Data Criacão<input type="text" id="con_dt_criacao">
+		</div>
 		<input type="button" value="Consultar"/>
 	</div>
 	<div class="tr">
