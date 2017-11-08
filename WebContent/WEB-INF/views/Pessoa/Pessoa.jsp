@@ -20,7 +20,7 @@
 	</div>
 </div>
 
-<div class="table" id="consultar" style="display:none;">
+<div class="table" id="consultar">
 	<div class="tr">
 		<div class="tdc">Código de Pessoa: <input type="text" id="con_cd_pessoa_fisica">&nbspProntuário: <input type="text" id="con_nr_prontuario">&nbspNome: <input type="text" id="con_nm_pessoa">&nbspNome Social: <input type="text" id="con_nm_social"></div>
 		<div class="tdc">CPF: <input type="text" id="con_cd_cpf">&nbspRG: <input type="text" id="con_nr_rg">&nbspPassaporte: <input type="text" id="con_nr_passaporte">&nbspCódigo Mãe: <input type="text" id="con_cd_mae"></div>
