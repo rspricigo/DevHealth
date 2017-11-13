@@ -9,4 +9,6 @@ public class ProntuarioController {
 	public String execute() {
 		return "/Prontuario/Prontuario";
 	}
+	
+	
 }
