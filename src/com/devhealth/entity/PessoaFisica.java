@@ -2,8 +2,15 @@ package com.devhealth.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
 public class PessoaFisica {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cd_pessoa_fisica;
 	private int nr_prontuario;
 	private String nm_pessoa;
