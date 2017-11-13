@@ -1,7 +1,14 @@
 package com.devhealth.entity;
 
-public class TelContato {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class TelContato {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
 	private Contato nr_seq_contato;
 	private String nr_fax;
