@@ -1,7 +1,13 @@
 package com.devhealth.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
 public class Convenio {
-
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cd_convenio;
 	private String ds_convenio;
 	private String cd_cgc;
