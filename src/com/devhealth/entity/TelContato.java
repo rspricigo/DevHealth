@@ -5,12 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+//@Entity
 public class TelContato {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
-	private Contato nr_seq_contato;
+	private int nr_seq_contato;
 	private String nr_fax;
 	private String nr_fixo;
 	private String nr_cel;
@@ -23,11 +23,11 @@ public class TelContato {
 		this.nr_sequencia = nr_sequencia;
 	}
 
-	public Contato getNr_seq_contato() {
+	public int getNr_seq_contato() {
 		return nr_seq_contato;
 	}
 
-	public void setNr_seq_contato(Contato nr_seq_contato) {
+	public void setNr_seq_contato(int nr_seq_contato) {
 		this.nr_seq_contato = nr_seq_contato;
 	}
 

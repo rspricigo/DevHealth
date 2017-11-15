@@ -6,10 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-@Entity
+//@Entity
 public class Atendimento {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@Id 
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_atendimento;
 	private PessoaFisica cd_pessoa_fisica;
 	private Date dt_atendimento;

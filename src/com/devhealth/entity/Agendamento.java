@@ -6,30 +6,30 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-@Entity
+//@Entity
 public class Agendamento {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@Id
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
-	private PessoaFisica cd_pessoa_fisica;
+	private int cd_pessoa_fisica;
 	private int nr_atendimento;
 	private Date dt_consulta;
 	private Date dt_agendamento;
-	private Convenio cd_convenio;
-	private Agenda cd_agenda;
+	private int cd_convenio;
+	private int cd_agenda;
 	private String ie_status;
 	private String classif_agendamento;
 	
 	public Agendamento() {
-		this.cd_pessoa_fisica = new PessoaFisica();
-		this.cd_convenio = new Convenio();
-		this.cd_agenda = new Agenda();
+	//	this.cd_pessoa_fisica = new PessoaFisica();
+	//	this.cd_convenio = new Convenio();
+	//	this.cd_agenda = new Agenda();
 	}
 	
 	public int getNrSequencia() {
 		return this.nr_sequencia;
 	}
-	public PessoaFisica getCdPessoaFisica() {
+	public int getCdPessoaFisica() {
 		return this.cd_pessoa_fisica;
 	}
 	public int getNrAtendimento() {
@@ -41,10 +41,10 @@ public class Agendamento {
 	public Date getDtAgendamento() {
 		return this.dt_agendamento;
 	}
-	public Convenio getCdConvenio() {
+	public int getCdConvenio() {
 		return this.cd_convenio;
 	}
-	public Agenda getCdAgenda() {
+	public int getCdAgenda() {
 		return this.cd_agenda;
 	}
 	public String getIeStatus() {
@@ -57,7 +57,7 @@ public class Agendamento {
 	public void setNrSequencia(int nr_sequencia) {
 		this.nr_sequencia = nr_sequencia;
 	}
-	public void setCdPessoaFisica(PessoaFisica cd_pessoa_fisica) {
+	public void setCdPessoaFisica(int cd_pessoa_fisica) {
 		this.cd_pessoa_fisica = cd_pessoa_fisica;
 	}
 	public void setNrAtendimento(int nr_atendimento) {
@@ -69,10 +69,10 @@ public class Agendamento {
 	public void setDtAgendamento(Date dt_agendamento) {
 		this.dt_agendamento = dt_agendamento;
 	}
-	public void setCdConvenio(Convenio cd_convenio) {
+	public void setCdConvenio(int cd_convenio) {
 		this.cd_convenio = cd_convenio;
 	}
-	public void setCdAgenda(Agenda cd_agenda) {
+	public void setCdAgenda(int cd_agenda) {
 		this.cd_agenda = cd_agenda;
 	}
 	public void setIeStatus(String ie_status) {

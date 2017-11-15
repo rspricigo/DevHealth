@@ -4,12 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-@Entity
+//@Entity
 public class Usuario {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@Id
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
-	private PessoaFisica cd_pessoa_fisica;
+	private int cd_pessoa_fisica;
 	private String nm_usuario;
 
 	public int getNr_sequencia() {
@@ -20,11 +20,11 @@ public class Usuario {
 		this.nr_sequencia = nr_sequencia;
 	}
 
-	public PessoaFisica getCd_pessoa_fisica() {
+	public int getCd_pessoa_fisica() {
 		return cd_pessoa_fisica;
 	}
 
-	public void setCd_pessoa_fisica(PessoaFisica cd_pessoa_fisica) {
+	public void setCd_pessoa_fisica(int cd_pessoa_fisica) {
 		this.cd_pessoa_fisica = cd_pessoa_fisica;
 	}
 
