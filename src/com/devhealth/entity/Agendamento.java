@@ -6,17 +6,24 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//@Entity
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+@Entity
 public class Agendamento {
-	//@Id
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
 	private int cd_pessoa_fisica;
 	private int nr_atendimento;
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dt_consulta;
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dt_agendamento;
-	private int cd_convenio;
-	private int cd_agenda;
+	@ManyToOne
+	private Convenio convenio;
+	@ManyToOne
+	private Agenda agenda;
 	private String ie_status;
 	private String classif_agendamento;
 	
@@ -41,11 +48,11 @@ public class Agendamento {
 	public Date getDtAgendamento() {
 		return this.dt_agendamento;
 	}
-	public int getCdConvenio() {
-		return this.cd_convenio;
+	public Convenio getConvenio() {
+		return this.convenio;
 	}
-	public int getCdAgenda() {
-		return this.cd_agenda;
+	public Agenda getAgenda() {
+		return this.agenda;
 	}
 	public String getIeStatus() {
 		return this.ie_status;
@@ -69,11 +76,11 @@ public class Agendamento {
 	public void setDtAgendamento(Date dt_agendamento) {
 		this.dt_agendamento = dt_agendamento;
 	}
-	public void setCdConvenio(int cd_convenio) {
-		this.cd_convenio = cd_convenio;
+	public void setConvenio(Convenio convenio) {
+		this.convenio = convenio;
 	}
-	public void setCdAgenda(int cd_agenda) {
-		this.cd_agenda = cd_agenda;
+	public void setAgenda(Agenda agenda) {
+		this.agenda = agenda;
 	}
 	public void setIeStatus(String ie_status) {
 		this.ie_status = ie_status;

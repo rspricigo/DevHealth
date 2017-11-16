@@ -4,12 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//@Entity
+import javax.persistence.ManyToOne;
+@Entity
 public class Contato {
-//	@Id
-//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
-	private int cd_pessoa_fisica;
+	@ManyToOne
+	private PessoaFisica pessoa_fisica;
 	private int cd_cep;
 	private int numero;
 	private String ds_logradouro;
@@ -24,12 +26,12 @@ public class Contato {
 		this.nr_sequencia = nr_sequencia;
 	}
 
-	public int getCd_pessoa_fisica() {
-		return cd_pessoa_fisica;
+	public PessoaFisica getPessoa_fisica() {
+		return pessoa_fisica;
 	}
 
-	public void setCd_pessoa_fisica(int cd_pessoa_fisica) {
-		this.cd_pessoa_fisica = cd_pessoa_fisica;
+	public void setPessoa_fisica(PessoaFisica pessoa_fisica) {
+		this.pessoa_fisica = pessoa_fisica;
 	}
 
 	public int getCd_cep() {

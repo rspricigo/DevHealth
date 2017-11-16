@@ -6,42 +6,50 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//@Entity
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+@Entity
 public class Atendimento {
-//	@Id 
-//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id 
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_atendimento;
-	private PessoaFisica cd_pessoa_fisica;
+	@ManyToOne
+	private PessoaFisica pessoa_fisica;
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dt_atendimento;
-	private Convenio cd_convenio;
-	private PessoaFisica cd_medico;
-	private PessoaFisica cd_responsavel;
+	@ManyToOne
+	private Convenio convenio;
+	@ManyToOne
+	private PessoaFisica medico;
+	@ManyToOne
+	private PessoaFisica responsavel;
 	private String ie_tipo_atendimento;
 	
 	public Atendimento() {
-		this.cd_pessoa_fisica = new PessoaFisica();
-		this.cd_convenio = new Convenio();
-		this.cd_medico = new PessoaFisica();
-		this.cd_responsavel = new PessoaFisica();
+		this.pessoa_fisica = new PessoaFisica();
+		this.convenio = new Convenio();
+		this.medico = new PessoaFisica();
+		this.responsavel = new PessoaFisica();
 	}
 	
 	public int getNrAtendimento() {
 		return this.nr_atendimento;
 	}
-	public PessoaFisica getCdPessoaFisica() {
-		return this.cd_pessoa_fisica;
+	public PessoaFisica getPessoaFisica() {
+		return this.pessoa_fisica;
 	}
 	public Date getDtAtendimento() {
 		return this.dt_atendimento;
 	}
-	public Convenio getCdConvenio() {
-		return this.cd_convenio;
+	public Convenio getConvenio() {
+		return this.convenio;
 	}
-	public PessoaFisica getCdMedico() {
-		return this.cd_medico;
+	public PessoaFisica getMedico() {
+		return this.medico;
 	}
-	public PessoaFisica getCdResponsavel() {
-		return this.cd_responsavel;
+	public PessoaFisica getResponsavel() {
+		return this.responsavel;
 	}
 	public String getIeTipoAtendimento() {
 		return this.ie_tipo_atendimento;
@@ -50,20 +58,20 @@ public class Atendimento {
 	public void setNrAtendimento(int nr_atendimento) {
 		this.nr_atendimento = nr_atendimento;
 	}
-	public void setCdPessoaFisica(PessoaFisica cd_pessoa_fisica) {
-		this.cd_pessoa_fisica = cd_pessoa_fisica;
+	public void setPessoaFisica(PessoaFisica pessoa_fisica) {
+		this.pessoa_fisica = pessoa_fisica;
 	}
 	public void setDtAtendimento(Date dt_atendimento) {
 		this.dt_atendimento = dt_atendimento;
 	}
-	public void setCdConvenio(Convenio cd_convenio) {
-		this.cd_convenio = cd_convenio;
+	public void setConvenio(Convenio convenio) {
+		this.convenio = convenio;
 	}
-	public void setCdMedico(PessoaFisica cd_medico) {
-		this.cd_medico = cd_medico;
+	public void setMedico(PessoaFisica medico) {
+		this.medico = medico;
 	}
-	public void setCdResponsavel(PessoaFisica cd_responsavel) {
-		this.cd_responsavel = cd_responsavel;
+	public void setResponsavel(PessoaFisica responsavel) {
+		this.responsavel = responsavel;
 	}
 	public void setIeTipoAtendimento(String ie_tipo_atendimento) {
 		this.ie_tipo_atendimento = ie_tipo_atendimento;
