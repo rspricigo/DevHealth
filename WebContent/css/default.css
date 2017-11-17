@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+#table{
+	margin-left: 150px;
+}
+
+.conteudo,iframe{
+	width: 500px;
+}
