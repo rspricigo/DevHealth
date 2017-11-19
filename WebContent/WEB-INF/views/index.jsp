@@ -6,7 +6,10 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Wellcome to the jungle baby</title>
-		<link rel="stylesheet" type="text/css" href="<c:url value="css/default.css"/>">
+		<link rel="stylesheet" type="text/css" href="<c:url value="resources/css/default.css"/>">
+		<link rel="stylesheet" type="text/css" href="<c:url value="resources/bootstrap-4.0.0-beta.2-dist/css/bootstrap.css"/>">
+		<script src="<c:url value="resources/JQuery.js"/>"></script>
+		<script src="<c:url value="resources/Popper.js"/>"></script>
 	</head>
 	<body>
 		<iframe src="/DevHealth/Pessoa/" id="conteudo">Conteudo</iframe>
