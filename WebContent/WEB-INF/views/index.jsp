@@ -12,6 +12,8 @@
 		<script src="<c:url value="resources/Popper.js"/>"></script>
 	</head>
 	<body>
-		<iframe src="/DevHealth/Pessoa/" id="conteudo">Conteudo</iframe>
+		<iframe src="/DevHealth/Cabecalho" id="cabecalho">Cabecalho</iframe>
+		<iframe src="/DevHealth/Conteudo" id="conteudo">Conteudo</iframe>
+		<iframe src="/DevHealth/Rodape" id="rodape">Rodape</iframe>
 	</body>
 </html>
