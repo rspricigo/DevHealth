@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 //@Entity
@@ -12,6 +13,7 @@ public class TelContato {
 //	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
 	@ManyToOne
+	@JoinColumn(name="nr_seq_contato")
 	private Contato contato;
 	private String nr_fax;
 	private String nr_fixo;

@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
@@ -22,10 +23,12 @@ public class PessoaFisica {
 	private String nr_rg;
 	private String nr_passaporte;
 	@ManyToOne
+	@JoinColumn(name="cd_mae")
 	private PessoaFisica mae;
 	private String ds_mae;
 	private Integer cd_religiao;
 	@ManyToOne
+	@JoinColumn(name="cd_pai")
 	private PessoaFisica pai;
 	private String ds_pai;
 	private Date dt_nascimento;

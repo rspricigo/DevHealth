@@ -1,5 +1,6 @@
 package com.devhealth.entity;
 
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 //@Entity
@@ -8,6 +9,7 @@ public class Usuario {
 	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
 	@ManyToOne
+	@JoinColumn(name="cd_pessoa_fisica")
 	private PessoaFisica pessoa_fisica;
 	private String nm_usuario;
 

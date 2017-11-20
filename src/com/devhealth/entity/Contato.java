@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 @Entity
 public class Contato {
@@ -11,8 +12,9 @@ public class Contato {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
 	@ManyToOne
+	@JoinColumn(name="cd_pessoa_fisica")
 	private PessoaFisica pessoa_fisica;
-	private int cd_cep;
+	private String cd_cep;
 	private int numero;
 	private String ds_logradouro;
 	private String complemento;
@@ -34,11 +36,11 @@ public class Contato {
 		this.pessoa_fisica = pessoa_fisica;
 	}
 
-	public int getCd_cep() {
+	public String getCd_cep() {
 		return cd_cep;
 	}
 
-	public void setCd_cep(int cd_cep) {
+	public void setCd_cep(String cd_cep) {
 		this.cd_cep = cd_cep;
 	}
 

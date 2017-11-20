@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 @Entity
@@ -12,8 +13,10 @@ public class ProcAgendamento {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
 	@ManyToOne
+	@JoinColumn(name="nr_seq_agendamento")
 	private Agendamento agendamento;
 	@OneToOne
+	@JoinColumn(name="cd_procedimento")
 	private Procedimento procedimento;
 	private int quantidade;
 	private String ie_lado;

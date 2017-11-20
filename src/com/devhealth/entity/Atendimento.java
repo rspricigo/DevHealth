@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -15,14 +16,18 @@ public class Atendimento {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_atendimento;
 	@ManyToOne
+	@JoinColumn(name="cd_pessoa_fisica")
 	private PessoaFisica pessoa_fisica;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dt_atendimento;
 	@ManyToOne
+	@JoinColumn(name="cd_convenio")
 	private Convenio convenio;
 	@ManyToOne
+	@JoinColumn(name="cd_medico")
 	private PessoaFisica medico;
 	@ManyToOne
+	@JoinColumn(name="cd_responsavel")
 	private PessoaFisica responsavel;
 	private String ie_tipo_atendimento;
 	

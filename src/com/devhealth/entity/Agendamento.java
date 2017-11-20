@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -21,8 +22,10 @@ public class Agendamento {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dt_agendamento;
 	@ManyToOne
+	@JoinColumn(name="cd_convenio")
 	private Convenio convenio;
 	@ManyToOne
+	@JoinColumn(name="cd_agenda")
 	private Agenda agenda;
 	private String ie_status;
 	private String classif_agendamento;
