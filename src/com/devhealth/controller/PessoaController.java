@@ -2,8 +2,9 @@ package com.devhealth.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -25,6 +26,15 @@ public class PessoaController {
 		
 		
 		return lista();
+	}
+	
+	@RequestMapping("testaAjax")
+	public void testaAjax(String id, HttpServletResponse response) {
+		System.out.println("Cheguei aqui");
+		System.out.println(id+"Teste");
+		System.out.println(id);
+		response.setStatus(200);
+		
 	}
 	
 	@RequestMapping("listaPessoas")

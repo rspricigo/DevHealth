@@ -5,15 +5,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cadastrar Pessoa</title>
-
+<script type="text/javascript" src="resources/js/jquery-3.2.1.js"></script>
 </head>
 <body>
+<script type="text/javascript">
+    function buscaMae() {
+    	var a = document.getElementById('nm_mae');
+    	
+    	$.post("testaAjax", {"id" : a.value});
+        
+       
+      
+    }
+  </script>
+
 	<form action = 'adicionaPessoa'>
 		Nome:<br>
   		<input type="text" name="nm_pessoa"><br>
   	
   		Nome Social:<br>
   		<input type="text" name="nm_social">
+  		
+  		<input type="hidden" name="id_pessoa" id="id_pessoa">
+  		
+  		<input type="text" id="nm_mae" name="nm_mae" onkeypress="buscaMae()">
+  		
+  		<input type="text" name="teste" id="teste">
   		
   		<input type="submit" value="Enviar">
 	</form>
