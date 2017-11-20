@@ -21,6 +21,11 @@
 <td>${pessoa.nm_social} </td>
 </tr>
 
+<tr>
+<td>Nome Mae:</td>
+<td>${pessoa.mae.nm_pessoa} </td>
+</tr>
+
 </c:forEach>
 
 

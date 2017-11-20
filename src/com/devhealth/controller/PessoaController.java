@@ -2,10 +2,10 @@ package com.devhealth.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.devhealth.dao.PessoaFisicaDAO;
@@ -19,9 +19,14 @@ public class PessoaController {
 	}
 	
 	@RequestMapping("adicionaPessoa")
-	public ModelAndView adicionaPessoa(PessoaFisica pf) {
+	public ModelAndView adicionaPessoa(PessoaFisica pf, @RequestParam("id_mae") int id) {
+		System.out.println(id);
 		PessoaFisicaDAO dao = new PessoaFisicaDAO();
+		PessoaFisica mae = dao.encontrar(id);
+		pf.setMae(mae);
+		
 		dao.save(pf);		
+		
 		System.out.println(pf.getCd_pessoa_fisica());
 		
 		
@@ -29,12 +34,10 @@ public class PessoaController {
 	}
 	
 	@RequestMapping("testaAjax")
-	public void testaAjax(String id, HttpServletResponse response) {
+	public void testaAjax(String id) {
 		System.out.println("Cheguei aqui");
 		System.out.println(id+"Teste");
-		System.out.println(id);
-		response.setStatus(200);
-		
+		System.out.println(id);		
 	}
 	
 	@RequestMapping("listaPessoas")

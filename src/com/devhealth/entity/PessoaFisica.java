@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name="pessoa_fisica")
@@ -20,10 +22,14 @@ public class PessoaFisica {
 	private String cd_cpf;
 	private String nr_rg;
 	private String nr_passaporte;
-	private Integer cd_mae;
+	@ManyToOne
+	@JoinColumn(name="cd_mae")
+	private PessoaFisica mae;
 	private String ds_mae;
 	private Integer cd_religiao;
-	private Integer cd_pai;
+	@ManyToOne
+	@JoinColumn(name="cd_pai")
+	private PessoaFisica pai;
 	private String ds_pai;
 	private Date dt_nascimento;
 	private String ie_sexo;
@@ -73,11 +79,11 @@ public class PessoaFisica {
 	public void setNr_passaporte(String nr_passaporte) {
 		this.nr_passaporte = nr_passaporte;
 	}
-	public Integer getCd_mae() {
-		return cd_mae;
+	public PessoaFisica getMae() {
+		return mae;
 	}
-	public void setCd_mae(Integer cd_mae) {
-		this.cd_mae = cd_mae;
+	public void setMae(PessoaFisica mae) {
+		this.mae = mae;
 	}
 	public String getDs_mae() {
 		return ds_mae;
@@ -91,11 +97,11 @@ public class PessoaFisica {
 	public void setCd_religiao(Integer cd_religiao) {
 		this.cd_religiao = cd_religiao;
 	}
-	public Integer getCd_pai() {
-		return cd_pai;
+	public PessoaFisica getPai() {
+		return pai;
 	}
-	public void setCd_pai(Integer cd_pai) {
-		this.cd_pai = cd_pai;
+	public void setPai(PessoaFisica pai) {
+		this.pai = pai;
 	}
 	public String getDs_pai() {
 		return ds_pai;

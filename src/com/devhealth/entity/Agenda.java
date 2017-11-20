@@ -4,16 +4,22 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-//@Entity
+@Entity
 public class Agenda {
 	
-//	@Id
-//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cd_agenda;
 	private String ds_agenda;
-	private int cd_medico;
-	private int cd_especialidade;
+	@ManyToOne
+	@JoinColumn(name="cd_medico")
+	private PessoaFisica medico;
+	@ManyToOne
+	@JoinColumn(name="cd_especialidade")
+	private Especialidade especialidade;
 	private String ie_tipo_agenda;
 	
 	public Agenda() {
@@ -26,11 +32,11 @@ public class Agenda {
 	public void setDsAgenda(String ds_agenda) {
 		this.ds_agenda = ds_agenda;
 	}
-	public void setCdMedico(int cd_medico) {
-		this.cd_medico = cd_medico;
+	public void setMedico(PessoaFisica medico) {
+		this.medico = medico;
 	}
-	public void setCdEspecialidade(int cd_especialidade) {
-		this.cd_especialidade = cd_especialidade;
+	public void setEspecialidade(Especialidade especialidade) {
+		this.especialidade = especialidade;
 	}
 	public void setIeTipoAgenda(String ie_tipo_agenda) {
 		this.ie_tipo_agenda = ie_tipo_agenda;
@@ -42,11 +48,11 @@ public class Agenda {
 	public String getDsAgenda() {
 		return this.ds_agenda;
 	}
-	public int getCdMedico() {
-		return this.cd_medico;
+	public PessoaFisica getMedico() {
+		return this.medico;
 	}
-	public int getCdEspecialidade() {
-		return this.cd_especialidade;
+	public Especialidade getEspecialidade() {
+		return this.especialidade;
 	}
 	public String getIeTipoAgenda() {
 		return this.ie_tipo_agenda;

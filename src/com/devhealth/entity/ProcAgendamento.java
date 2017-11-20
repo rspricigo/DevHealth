@@ -4,13 +4,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//@Entity
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+@Entity
 public class ProcAgendamento {
-//	@Id
-//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
-	private int nr_seq_agendamento;
-	private int cd_procedimento;
+	@ManyToOne
+	@JoinColumn(name="nr_seq_agendamento")
+	private Agendamento agendamento;
+	@OneToOne
+	@JoinColumn(name="cd_procedimento")
+	private Procedimento procedimento;
 	private int quantidade;
 	private String ie_lado;
 	private String observacao;
@@ -21,17 +28,17 @@ public class ProcAgendamento {
 	public void setNr_sequencia(int nr_sequencia) {
 		this.nr_sequencia = nr_sequencia;
 	}
-	public int getNr_seq_agendamento() {
-		return nr_seq_agendamento;
+	public Agendamento getAgendamento() {
+		return agendamento;
 	}
-	public void setNr_seq_agendamento(int nr_seq_agendamento) {
-		this.nr_seq_agendamento = nr_seq_agendamento;
+	public void setAgendamento(Agendamento agendamento) {
+		this.agendamento = agendamento;
 	}
-	public int getCd_procedimento() {
-		return cd_procedimento;
+	public Procedimento getProcedimento() {
+		return procedimento;
 	}
-	public void setCd_procedimento(int cd_procedimento) {
-		this.cd_procedimento = cd_procedimento;
+	public void setProcedimento(Procedimento procedimento) {
+		this.procedimento = procedimento;
 	}
 	public int getQuantidade() {
 		return quantidade;
