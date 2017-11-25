@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import com.devhealth.dao.PessoaFisicaDAO;
 @Entity
 @Table(name="pessoa_fisica")
 public class PessoaFisica {
@@ -85,6 +86,14 @@ public class PessoaFisica {
 	public void setMae(PessoaFisica mae) {
 		this.mae = mae;
 	}
+	
+	public void setMaeteste(int maeteste) {
+		//this.mae = mae;
+		PessoaFisicaDAO dao = new PessoaFisicaDAO();
+		this.setMae(dao.encontrar(maeteste));
+	}
+	
+	
 	public String getDs_mae() {
 		return ds_mae;
 	}

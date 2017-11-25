@@ -19,17 +19,14 @@ public class PessoaController {
 	}
 	
 	@RequestMapping("adicionaPessoa")
-	public ModelAndView adicionaPessoa(PessoaFisica pf, @RequestParam("id_mae") int id) {
-		System.out.println(id);
+  //public ModelAndView adicionaPessoa(PessoaFisica pf, @RequestParam("id_mae") int id) {
+	public ModelAndView adicionaPessoa(PessoaFisica pf) {
+	//	System.out.println(id);
 		PessoaFisicaDAO dao = new PessoaFisicaDAO();
-		PessoaFisica mae = dao.encontrar(id);
-		pf.setMae(mae);
-		
-		dao.save(pf);		
-		
+	//	PessoaFisica mae = dao.encontrar(id);
+	//	pf.setMae(mae);		
+		dao.save(pf);			
 		System.out.println(pf.getCd_pessoa_fisica());
-		
-		
 		return lista();
 	}
 	
