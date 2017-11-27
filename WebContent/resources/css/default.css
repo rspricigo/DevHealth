@@ -15,6 +15,26 @@
 	height: 100%;
 }
 
-.table{
-	margin-left: 150px;
+
+input[type=text]{
+	width:100%;
+}
+#listar.table{
+	padding: 5px;
+}
+
+.tdc.listar,.tdd.listar{
+	border: 2px solid black;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.btn-table{
+	padding: 7px;
+}
+
+.btn.btn-danger.btn-block,.btn.btn-info.btn-block{
+	font-weight: bold;
+	font-size: 20px;
 }
