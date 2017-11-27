@@ -11,7 +11,7 @@ public class AtendimentoController {
 
 	@RequestMapping("/Atendimento")
 	public String execute() {
-		return "/Atendimento/Atendimento";
+		return "/Atendimento/atendimento";
 	}
 	
 	@RequestMapping("/adicionaAtendimento")

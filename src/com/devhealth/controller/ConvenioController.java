@@ -10,7 +10,7 @@ import com.devhealth.entity.Convenio;
 public class ConvenioController {
 	@RequestMapping("/Convenio")
 	public String execute() {
-		return "/Convenio/Convenio";
+		return "/Convenio/convenio";
 	}
 	
 	@RequestMapping("adicionaConvenio")
