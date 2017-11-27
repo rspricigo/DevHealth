@@ -6,7 +6,7 @@
 	<head>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Atendimento</title>
+		<title>Atendimento </title>
 		<link rel="stylesheet" type="text/css" href="<c:url value="resources/css/default.css"/>">
 		<link rel="stylesheet" type="text/css" href="<c:url value="resources/bootstrap-4.0.0-beta.2-dist/css/bootstrap.css"/>">
 		<script src="<c:url value="resources/JQuery.js"/>"></script>
