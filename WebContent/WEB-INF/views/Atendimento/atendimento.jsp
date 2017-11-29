@@ -46,18 +46,21 @@
            		</div>
 		    </div>
 				
-			<div class="container-fluid">
-			    <div class="table" id="listar">
-			        <div class="row tr listar">
-			            <div class="col-md-1 tdc listar">Atendimento</div>
-			            <div class="col-md-3 tdd listar">Nome</div>
-			            <div class="col-md-1 tdd listar">Data Atend.</div>
-			            <div class="col-md-2 tdd listar">Convênio</div>
-			            <div class="col-md-3 tdd listar">Responsável</div>
-			            <div class="col-md-2 tdd listar">Tipo Atend.</div>
-			        </div>
-			    </div>
+    <div class="table-responsive">
+			    <table class="table table-dark" id="listar">
+			        <thead>
+			        <tr>
+			            <td>Atendimento</td>
+			            <td>Nome</td>
+			            <td>Data Atend.<td>
+			            <td>Convênio</td>
+			            <td>Responsável</td>
+			            <td>Tipo Atend.</td>
+			        </tr>
+			        </thead>
+			    </table>
 			</div>
+			
 		</div>
  	</body>
 </html>
