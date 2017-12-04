@@ -3,6 +3,7 @@ package com.devhealth.dao;
 import java.io.Serializable;
 import java.util.List;
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -50,6 +51,8 @@ public abstract class GenericDAO<T, I extends Serializable> {
 	       em.close();
 	       return list;
 	   }
+	
+	
 
 	   public T encontrar(I id) {
 		   EntityManager em = JPAUtil.getEntityManager();

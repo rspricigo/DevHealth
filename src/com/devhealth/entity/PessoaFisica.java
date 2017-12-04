@@ -3,12 +3,14 @@ package com.devhealth.entity;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 import com.devhealth.dao.PessoaFisicaDAO;
 @Entity
 @Table(name="pessoa_fisica")
@@ -23,12 +25,12 @@ public class PessoaFisica {
 	private String cd_cpf;
 	private String nr_rg;
 	private String nr_passaporte;
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="cd_mae")
 	private PessoaFisica mae;
 	private String ds_mae;
 	private Integer cd_religiao;
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="cd_pai")
 	private PessoaFisica pai;
 	private String ds_pai;
@@ -87,10 +89,18 @@ public class PessoaFisica {
 		this.mae = mae;
 	}
 	
-	public void setMaeteste(int maeteste) {
-		//this.mae = mae;
+	public void setId_mae(int id_mae) {
+		
 		PessoaFisicaDAO dao = new PessoaFisicaDAO();
-		this.setMae(dao.encontrar(maeteste));
+		this.setMae(dao.encontrar(id_mae));
+		this.setDs_mae(this.mae.getNm_pessoa());
+	}
+	
+	public void setId_pai(int pai) {
+		
+		PessoaFisicaDAO dao = new PessoaFisicaDAO();
+		this.setPai(dao.encontrar(pai));
+		this.setDs_pai(this.pai.getNm_pessoa());
 	}
 	
 	
