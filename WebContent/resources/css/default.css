@@ -21,6 +21,7 @@ input[type=text]{
 }
 #listar.table{
 	padding: 5px;
+	display: table;
 }
 
 .tdc.listar,.tdd.listar{
