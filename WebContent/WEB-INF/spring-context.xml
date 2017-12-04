@@ -11,7 +11,9 @@
     http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
   <context:component-scan base-package="com.devhealth" />
-  <mvc:annotation-driven />
+  <mvc:annotation-driven />       
+  
+  
   <mvc:default-servlet-handler />
   <mvc:resources mapping="/resources/**" location="/resources/"/>
 
@@ -19,5 +21,9 @@
     <property name="prefix" value="/WEB-INF/views/"/>
     <property name="suffix" value=".jsp"/>
   </bean>
+  
+  
+     
+
 
 </beans>
