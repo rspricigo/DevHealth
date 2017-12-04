@@ -1,0 +1,41 @@
+@charset "ISO-8859-1";
+
+#cabecalho,iframe{
+	width: 100%;
+	height: 100%;
+}
+
+#conteudo,iframe{
+	width: 100%;
+	height: 100%;
+}
+
+#rodape,iframe{
+	width: 100%;
+	height: 100%;
+}
+
+
+input[type=text]{
+	width:100%;
+}
+#listar.table{
+	padding: 5px;
+	display: table;
+}
+
+.tdc.listar,.tdd.listar{
+	border: 2px solid black;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.btn-table{
+	padding: 7px;
+}
+
+.btn.btn-danger.btn-block,.btn.btn-info.btn-block{
+	font-weight: bold;
+	font-size: 20px;
+}

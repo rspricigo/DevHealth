@@ -1,7 +1,14 @@
 package com.devhealth.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Especialidade {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cd_especialidade;
     private String ds_especialidade;
 	private int cd_cbo;

@@ -1,8 +1,17 @@
+Criar as Controllers
+
+Larissa: Convenio, Especialidade, Usuario, Contato
+
+Reginaldo: Atendimento, Agendamento, ProcAgendamento, TelContato
+
+
+
+*---------------------------------------------------*
 30-10-2017
 
-	- Protótipos de telas;
+	- Protï¿½tipos de telas;
 	- Mapear as classes restantes para o BD e
-	- Criação de CRUD's
+	- Criaï¿½ï¿½o de CRUD's
 
 --------------------------------------------------------
 Criar as classes:

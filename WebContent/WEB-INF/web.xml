@@ -5,10 +5,64 @@
   http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
 id="WebApp_ID" version="3.0">
 
-<display-name>ServletListenerExample</display-name>
-
+ <display-name>DevHealth</display-name>
+<!-- 
  <listener>
     <listener-class>com.devhealth.servlet.MeuListener</listener-class>
-  </listener>
+  </listener> 
+  
+  
+  <servlet>
+  <servlet-name>primeiraServlet</servlet-name>
+  <servlet-class>com.devhealth.servlet.ControllerServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>primeiraServlet</servlet-name>
+  <url-pattern>/larissa</url-pattern>
+</servlet-mapping> -->
+ 
+  <servlet>
+      <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+      <servlet-class>
+          org.springframework.web.servlet.DispatcherServlet
+      </servlet-class>
+      <init-param>
+          <param-name>contextConfigLocation</param-name>
+          <param-value>
+              /WEB-INF/spring-context.xml
+          </param-value>
+      </init-param>
+      <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>Spring MVC Dispatcher Servlet</servlet-name>
+      <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <!-- <servlet>
+  	<servlet-name>CSS</servlet-name>
+  	<servlet-class>
+          org.springframework.web.servlet.DispatcherServlet
+    </servlet-class>
+    <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            /WEB-INF/spring-context-css.xml
+        </param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+      <servlet-name>CSS</servlet-name>
+      <url-pattern>/css</url-pattern>
+  </servlet-mapping> -->
+
+<welcome-file-list>
+    <welcome-file>/WEB-INF/views/index.jsp</welcome-file>
+</welcome-file-list>
+  
 
 </web-app>

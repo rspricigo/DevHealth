@@ -2,27 +2,44 @@ package com.devhealth.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+@Entity
 public class Agendamento {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nr_sequencia;
-	private PessoaFisica cd_pessoa_fisica;
+	private int cd_pessoa_fisica;
 	private int nr_atendimento;
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dt_consulta;
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dt_agendamento;
-	private Convenio cd_convenio;
-	private Agenda cd_agenda;
+	@ManyToOne
+	@JoinColumn(name="cd_convenio")
+	private Convenio convenio;
+	@ManyToOne
+	@JoinColumn(name="cd_agenda")
+	private Agenda agenda;
 	private String ie_status;
 	private String classif_agendamento;
 	
 	public Agendamento() {
-		this.cd_pessoa_fisica = new PessoaFisica();
-		this.cd_convenio = new Convenio();
-		this.cd_agenda = new Agenda();
+	//	this.cd_pessoa_fisica = new PessoaFisica();
+	//	this.cd_convenio = new Convenio();
+	//	this.cd_agenda = new Agenda();
 	}
 	
 	public int getNrSequencia() {
 		return this.nr_sequencia;
 	}
-	public PessoaFisica getCdPessoaFisica() {
+	public int getCdPessoaFisica() {
 		return this.cd_pessoa_fisica;
 	}
 	public int getNrAtendimento() {
@@ -34,11 +51,11 @@ public class Agendamento {
 	public Date getDtAgendamento() {
 		return this.dt_agendamento;
 	}
-	public Convenio getCdConvenio() {
-		return this.cd_convenio;
+	public Convenio getConvenio() {
+		return this.convenio;
 	}
-	public Agenda getCdAgenda() {
-		return this.cd_agenda;
+	public Agenda getAgenda() {
+		return this.agenda;
 	}
 	public String getIeStatus() {
 		return this.ie_status;
@@ -50,7 +67,7 @@ public class Agendamento {
 	public void setNrSequencia(int nr_sequencia) {
 		this.nr_sequencia = nr_sequencia;
 	}
-	public void setCdPessoaFisica(PessoaFisica cd_pessoa_fisica) {
+	public void setCdPessoaFisica(int cd_pessoa_fisica) {
 		this.cd_pessoa_fisica = cd_pessoa_fisica;
 	}
 	public void setNrAtendimento(int nr_atendimento) {
@@ -62,11 +79,11 @@ public class Agendamento {
 	public void setDtAgendamento(Date dt_agendamento) {
 		this.dt_agendamento = dt_agendamento;
 	}
-	public void setCdConvenio(Convenio cd_convenio) {
-		this.cd_convenio = cd_convenio;
+	public void setConvenio(Convenio convenio) {
+		this.convenio = convenio;
 	}
-	public void setCdAgenda(Agenda cd_agenda) {
-		this.cd_agenda = cd_agenda;
+	public void setAgenda(Agenda agenda) {
+		this.agenda = agenda;
 	}
 	public void setIeStatus(String ie_status) {
 		this.ie_status = ie_status;

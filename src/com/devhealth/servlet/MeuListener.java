@@ -5,7 +5,7 @@ import javax.servlet.annotation.WebListener;
 
 import com.devhealth.dao.TesteDAO;
 
-@WebListener
+//@WebListener
 public class MeuListener implements ServletContextListener {
 
 	@Override
