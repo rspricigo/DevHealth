@@ -13,21 +13,13 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<!-- <div class="row">
-				<div class="col"> !-->
-					<iframe src="/DevHealth/Cabecalho" id="cabecalho">Cabecalho</iframe>
-				<!-- </div>
-			</div>
-			<div class="row">
-				<div class="col"> !-->
-					<iframe src="/DevHealth/Conteudo" id="conteudo">Conteudo</iframe>
-				<!-- </div>
-			</div>
-			<div class="row">
-				<div class="col"> !-->
-					<iframe src="/DevHealth/Rodape" id="rodape">Rodape</iframe>
-				<!-- </div>
-			</div> !-->
+			<header>
+				<iframe src="/DevHealth/Cabecalho" id="cabecalho">Cabecalho</iframe>
+			</header>
+			<iframe src="/DevHealth/Conteudo" id="conteudo">Conteudo</iframe>
+			<footer>
+				<iframe src="/DevHealth/Rodape" id="rodape">Rodape</iframe>
+			</footer>
 		</div>
 	</body>
 </html>
