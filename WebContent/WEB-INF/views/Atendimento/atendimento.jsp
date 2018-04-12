@@ -5,62 +5,75 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>Consultar Atendimento</title>
+		<title>Atendimento</title>
 		<link rel="stylesheet" type="text/css" href="<c:url value="resources/css/default.css"/>">
 		<link rel="stylesheet" type="text/css" href="<c:url value="resources/bootstrap-4.0.0-beta.2-dist/css/bootstrap.css"/>">
 		<script src="<c:url value="resources/JQuery.js"/>"></script>
 		<script src="<c:url value="resources/Popper.js"/>"></script>
+		    <style>
+        body {
+            background-color: ghostwhite;
+        }
+    </style>
 	</head>
 	<body>
-		<div class="container-fluid" id="container-principal">
-		
-		    <div class="table" id="cadastrar" style="display:none;">
-		        <div class="tr">
-		            <div class="tdc">nr_atendimento</div>
-		            <div class="tdc">cd_pessoa_fisica</div>
-		            <div class="tdc">dt_atendimento</div>
-		            <div class="tdc">cd_convenio</div>
-		            <div class="tdc">cd_medico</div>
-		            <div class="tdc">cd_responsavel</div>
-		            <div class="tdc">ie_tipo_atendimento</div>
-		        </div>
-		    </div>
-		
-		    <div class="table" id="consultar">
-		        <div class="row tr">
-		            <div class="col-md-4 tdd">Número de Atendimento: <input type="text" id="con_nr_atendimento"></div>
-		            <div class="col-md-4 tdd">Nome: <input type="text" id="con_cd_pessoa_fisica"></div>
-	                <div class="col-md-4 tdd">Data Atendimento: <input type="text" id="con_dt_atendimento"></div>
-		        </div>
-		        <div class="row tr">
-		                <div class="col-md-4 tdd">Convênio: <input type="text" id="con_cd_convenio"></div>
-		                <div class="col-md-4 tdd">Médico: <input type="text" id="con_cd_medico"></div>
-		                <div class="col-md-4 tdd">Responsável: <input type="text" id="con_cd_responsavel"></div>
-		        </div>
-		        <div class="row tr">
-		                <div class="col-md-4 tdd">Tipo Atendimento: <input type="text" id="con_ds_tipo_atendimento"></div>
-		        </div>
-		        <div class="tr row">
-		            <div class="col-md-6 btn-table"><button type="button" class="btn btn-info btn-block">Cadastrar</button></div>
-            		<div class="col-md-6 btn-table"><button type="button" class="btn btn-danger btn-block">Desfazer</button></div>
-           		</div>
-		    </div>
-				
-    <div class="table-responsive">
-			    <table class="table table-dark" id="listar">
-			        <thead>
-			        <tr>
-			            <td>Atendimento</td>
-			            <td>Nome</td>
-			            <td>Data Atend.<td>
-			            <td>Convênio</td>
-			            <td>Responsável</td>
-			            <td>Tipo Atend.</td>
-			        </tr>
-			        </thead>
-			    </table>
-			</div>
-			
-		</div>
+		 <div class="container-fluid">
+           
+        <div class="container-fluid" id="cadastrar">
+                    <form action="about:blank">
+                        
+                        <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="nr_atendimento">Atendimento:</label>
+                            <input type="text" class="form-control" id="nr_atendimento" name="nr_atendimento">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="pessoa_fisica">Nome Paciente:</label>
+                            <input type="text" class="form-control" id="pessoa_fisica" name="pessoa_fisica">
+                        </div>
+                        <div class="form-group col-md-4">
+                                <label for="dt_atendimento">Data Atendimento:</label>
+                                <input type="date" class="form-control" id="dt_atendimento" name="dt_atendimento">
+                        </div>
+                        </div>
+
+                        <div class="row">
+                        <div class="form-group col-md-4">
+                                <label for="cd_convenio">Convênio:</label>
+                                <select class="form-control" id="cd_convenio" name="cd_convenio">
+                                    <option >Particular</option>
+                                    <option >Convênio</option>
+                                    <option >SUS</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                    <label for="medico">Médico:</label>
+                                    <input type="text" class="form-control" id="medico" name="medico">
+                            </div>
+                            <div class="form-group col-md-4">
+                                    <label for="responsavel">Responsável:</label>
+                                    <input type="text" class="form-control" id="responsavel" name="responsavel">
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="form-group col-md-4">
+                                    <label for="ie_tipo_atendimento">Tipo Atendimento:</label>
+                                    <select class="form-control" id="ie_tipo_atendimento" name="ie_tipo_atendimento">
+                                        <option >Consulta</option>
+                                        <option >Procedimento</option>
+                                        <option >Retorno</option>
+                                    </select>
+                                </div>
+                                </div>
+
+                                          <div class="tr row">
+                                            <div class="col-md-6 btn-table"><button type="submit" class="btn btn-info btn-block">Salvar</button></div>
+                                            <div class="col-md-6 btn-table"><button type="button" class="btn btn-danger btn-block">Desfazer</button></div>
+                                           </div>
+                                
+
+                    </form>
+        </div>
+    </div>
  	</body>
 </html>
