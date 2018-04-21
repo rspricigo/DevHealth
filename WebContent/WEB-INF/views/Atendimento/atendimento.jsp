@@ -25,7 +25,7 @@
                         <div class="row">
                         <div class="form-group col-md-4">
                             <label for="nr_atendimento">Atendimento:</label>
-                            <input type="text" class="form-control" id="nr_atendimento" name="nr_atendimento">
+                            <input type="number" class="form-control" id="nr_atendimento" name="nr_atendimento">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="pessoa_fisica">Nome Paciente:</label>
