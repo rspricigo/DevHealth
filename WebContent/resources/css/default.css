@@ -4,7 +4,8 @@ body{
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background-color: #DCDCDC !important;
+	background-color: ghostwhite;
+	/*#DCDCDC !important;*/
 }
 
 div.container-fluid{
@@ -127,7 +128,7 @@ input[type=text]{
 
 /*Início tela Login*/
 
-.body_login, .html_login {
+.body, .html {
     height: 100%;
     background-repeat: no-repeat;
 background: rgb(185,210,224); /* Old browsers */

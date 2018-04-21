@@ -8,6 +8,12 @@ import com.devhealth.entity.Usuario;
 
 @Controller
 public class UsuarioController {
+	@RequestMapping("/Login")
+	public String login() {
+		return "/Usuario/TelaLogin";
+	}
+	
+	
 	@RequestMapping("/Usuario")
 	public String execute() {
 		return "/Usuario/Usuario";
