@@ -34,10 +34,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b9d2e0', end
             <h2 class='login_title text-center'>Login</h2>
             <hr>
     
-                <form class="form-signin">
+                <form class="form-signin" action="efetuaLogin" method="POST">
                     <span id="reauth-email" class="reauth-email"></span>
                     <p class="input_title">Usuário</p>
-                    <input type="text" id="inputEmail" class="login_box" placeholder="Usuário" required autofocus>
+                    <input type="text" id="inputEmail" name="nm_usuario" class="login_box" placeholder="Usuário" required autofocus>
                     <p class="input_title">Senha</p>
                     <input type="password" id="inputPassword" class="login_box" placeholder="******" required>
                     <div id="remember" class="checkbox">
