@@ -59,6 +59,10 @@ id="WebApp_ID" version="3.0">
       <servlet-name>CSS</servlet-name>
       <url-pattern>/css</url-pattern>
   </servlet-mapping> -->
+  
+  <session-config>
+        <session-timeout>3</session-timeout>
+    </session-config>
 
 <welcome-file-list>
     <welcome-file>/WEB-INF/views/index.jsp</welcome-file>

@@ -22,6 +22,11 @@
     <property name="suffix" value=".jsp"/>
   </bean>
   
+  <mvc:interceptors>
+          <bean 
+          class=
+          "com.devhealth.interceptor.Interceptor" />
+      </mvc:interceptors>
   
      
 

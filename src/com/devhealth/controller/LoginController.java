@@ -28,6 +28,12 @@ public class LoginController {
 		}
 		return mv;
 	}
+	
+	@RequestMapping("logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:loginForm";
+    }
 
 	private boolean usuarioValido(Usuario u) {
 		if(u.getNm_usuario().equals("Jasper")) {
