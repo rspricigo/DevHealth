@@ -6,6 +6,7 @@
 
 <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Login</title>
 		<link rel="stylesheet" type="text/css" href="<c:url value="resources/css/default.css"/>">
 		<link rel="stylesheet" type="text/css" href="<c:url value="resources/bootstrap-4.0.0-beta.2-dist/css/bootstrap.css"/>">
